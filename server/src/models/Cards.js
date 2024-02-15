@@ -48,3 +48,4 @@ const Cards = (sequelize) => {
 };
 
 module.exports = Cards;
+//para commit
