@@ -5,7 +5,7 @@ const createUser = async (req , res) => {
     try {
         const { username, email, password, avatar_img, master , admin} = req.body;
 
-        if(!username || !email || !password) return res.status(500).send("Please provide username, email, and password");
+        if(!username || !email || !password) return res.status(500).json("Please provide username, email, and password");
         
         if (username && email) {
             const saltRounds = 10; //Número de rondas de cifrado
@@ -30,7 +30,7 @@ const createUser = async (req , res) => {
                 return res.json(response);
 
             } else {
-                return res.status(409).send("The user already exists, try another one");
+                return res.status(409).json("The user already exists, try another one");
             }
         };
 
