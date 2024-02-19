@@ -13,6 +13,11 @@
     "sequelize-cli": "^6.6.2"
   },
   "scripts": {
-    "start": "nodemon index.js"
+    "start": "nodemon index.js",
+    "test": "jest"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "supertest": "^6.3.4"
   }
 }
