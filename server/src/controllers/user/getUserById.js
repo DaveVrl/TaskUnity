@@ -1,11 +1,11 @@
-const { Users } = require('../../db');
+const { Users , Boards } = require('../../db');
 
 const getUserById = async (req, res) => {
 
     try {
 
         const { id } = req.params;
-        const idUser = await Users.findOne({where: {id:id}});
+        const idUser = await Users.findByPk(id);
 
         if(!idUser) return res.status(400).json("User not found.");
 
