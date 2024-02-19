@@ -17,8 +17,7 @@ const Boards = (sequelize) => {
         },
 
         created_by: {
-            type: DataTypes.INTEGER,
-            allowNull: false
+            type: DataTypes.INTEGER
         },
 
         description: {
@@ -34,8 +33,13 @@ const Boards = (sequelize) => {
         },
 
         position: {
-            type: DataTypes.INTEGER,
-            allowNull: false
+            type: DataTypes.INTEGER
+        
+        },
+
+        state: {
+            type: DataTypes.BOOLEAN,
+            defaultValue: true
         }
     });
 };
