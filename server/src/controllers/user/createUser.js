@@ -1,4 +1,4 @@
-const { Users } = require("../db");
+const { Users } = require("../../db");
 const bcrypt = require('bcrypt');
 
 const createUser = async (req , res) => {
