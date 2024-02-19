@@ -15,14 +15,14 @@ const updateUser = async (req,res) => {
 
             await Users.update({ password:hashedPassword }, {where: {id:id}});
 
-            return res.json({ message: "Password updated successfully."});
+            return res.status(200).json({ message: "Password updated successfully."});
         }
 
         const result = await Users.update({ username, email, avatar_img, admin 
         }, {where: {id:id}});
 
         if (result[0] === 1) {
-            return res.json({ message: "Profile updated successfully."});
+            return res.status(200).json({ message: "Profile updated successfully."});
         } else {
             return res.status(400).json({ error: "Could not update user profile."});
         }

@@ -11,7 +11,7 @@ const deleteUser = async (req, res) => {
         });
 
         if (deleteUserAccount === 1) {
-            return res.json({message:'User deleted successfully.'});
+            return res.status(200).json({message:'User deleted successfully.'});
         } else {
             return res.status(400).json({error: 'Could not delete user.'})
         }
