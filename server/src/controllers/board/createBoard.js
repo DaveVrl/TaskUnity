@@ -1,6 +1,7 @@
 const { Boards , Users } = require('../../db');
 
 const createBoard = async (req, res) => {
+    
     const { id } = req.params;
     const { title, description, logo } = req.body;
 
@@ -16,11 +17,12 @@ const createBoard = async (req, res) => {
             title,
             description,
             logo,
-            created_by: id // Establecer el ID del usuario como creador del tablero
+            created_by: id 
         });
 
-        // ASOCIAR EL TABLERO CON EL USUARIO !!!!!!
-        await user.addBoard(newBoard);
+        // ¡¡¡¡¡¡ ASOCIAR EL TABLERO CON EL USUARIO !!!!!!
+        // Y se asigna el valor 'owner' en el campo role de UserBoards
+        await user.addBoard(newBoard, { through: { role:'owner'}});
 
         // Devolver el tablero creado como respuesta
         return res.status(201).json(newBoard);
