@@ -23,12 +23,10 @@ const Lists = (sequelize) => {
 
         position: {
             type: DataTypes.INTEGER,
-            allowNull: false
         },
 
         type: {
             type: DataTypes.STRING,
-            allowNull: false,
             defaulValue: 'task'
             //Valor 'task_over' para manejar lista de task finalizadas
         }
