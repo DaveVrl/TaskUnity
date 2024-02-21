@@ -41,7 +41,7 @@ sequelize.models = Object.fromEntries(capsEntries);
 // En sequelize.models están todos los modelos importados como propiedades
 // Para relacionarlos hacemos un destructuring
 
-const { Users , Boards , Lists } = sequelize.models;
+const { Users , Boards , Lists , Cards } = sequelize.models;
 
 // Users.beforeCreate((user, options) => {
 // 	if (!user.avatar_img) {
@@ -55,8 +55,12 @@ const { Users , Boards , Lists } = sequelize.models;
 Users.belongsToMany(Boards, {through:'user_boards'});
 Boards.belongsToMany(Users, {through:'user_boards'});
 
-Boards.belongsToMany(Lists, {through:'board_lists'});
-Lists.belongsToMany(Boards, {through:'board_lists'});
+//LA FK LA VEMOS HACIENDO UN GET, CUANDO LO CREA MUESTRA NULL PERO HAY RELACIÓN
+Boards.hasMany(Lists);
+Lists.belongsTo(Boards);
+
+Lists.hasMany(Cards);
+Cards.belongsTo(Lists); 
 
 
 module.exports = {

@@ -13,12 +13,11 @@ const Cards = (sequelize) => {
         },
 
         title: {
-            type: DataTypes.STRING,
-            allowNull: false
+            type: DataTypes.STRING
         },
 
         description: {
-            type: DataTypes.STRING,
+            type: DataTypes.STRING
         },
 
         comments: {
@@ -26,19 +25,18 @@ const Cards = (sequelize) => {
         },
 
         position: {
-            type: DataTypes.INTEGER,
-            allowNull: false
+            type: DataTypes.INTEGER
         },
 
         state: {
             type: DataTypes.STRING,
-            allowNull: false,
             defaulValue: 'default'
             //Debo manejar 3 estados para styles 'assigned' 'done'
         },
 
         assigned_to: {
-            type: DataTypes.ARRAY(DataTypes.INTEGER)
+            type: DataTypes.ARRAY(DataTypes.INTEGER),
+            defaulValue: 'default'
         },
 
         due_date: {
