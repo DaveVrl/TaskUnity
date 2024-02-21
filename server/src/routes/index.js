@@ -4,6 +4,7 @@ const { Router } = require('express');
 const usersRoutes = require('./usersRoutes');
 const boardsRoutes = require('./boardsRoutes');
 const listsRoutes = require('./listsRoutes');
+const cardsRoutes = require('./cardsRoutes');
 
 const router = Router();
 
@@ -11,6 +12,7 @@ const router = Router();
 router.use('/TaskUnity',usersRoutes);
 router.use('/TaskUnity',boardsRoutes);
 router.use('/TaskUnity',listsRoutes);
+router.use('/TaskUnity',cardsRoutes);
 
 
 

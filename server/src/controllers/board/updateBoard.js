@@ -18,7 +18,10 @@ const updateBoard = async (req, res) => {
 
         if(boardUpdate === 0) return res.status(404).json('Board not found');
 
-        return res.status(200).json('Board update successfully');
+        const updateBoard = await Boards.findByPk(id)
+
+        //'Board update successfully'
+        return res.status(200).json(updateBoard);
         
     } catch (error) {
         return res.status(500).json({error:error.message});

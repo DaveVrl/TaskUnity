@@ -1,6 +1,7 @@
 const { Boards, Lists } = require('../../db');
 
 const createList = async (req, res) => {
+
     const { boardId } = req.params;
     const { title, description, position, type } = req.body;
 
