@@ -17,7 +17,8 @@ const createBoard = async (req, res) => {
             title,
             description,
             logo,
-            created_by: id 
+            created_by: id,
+            members_id: [id] 
         });
 
         // ¡¡¡¡¡¡ ASOCIAR EL TABLERO CON EL USUARIO !!!!!!
