@@ -15,8 +15,13 @@ const inviteUserToBoard = async (req, res) => {
         // Asociar el usuario con el tablero y establecer el rol como 'member'
         await user.addBoard(board, { through: { role: 'member' } });
 
-        // Devolver una respuesta exitosa
+        // Obtener el array actual de miembros y agregar la nueva ID de usuario invitado
+        let membersId = [...board.members_id];
+        membersId.push(userId);
+        await board.update({ members_id: membersId });
+
         return res.status(200).json({ message: "User invited successfully" });
+        
     } catch (error) {
         return res.status(500).json({ error: error.message });
     }

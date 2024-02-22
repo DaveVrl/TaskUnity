@@ -25,7 +25,8 @@ const Boards = (sequelize) => {
         },
 
         members_id: {
-            type: DataTypes.ARRAY(DataTypes.INTEGER)
+            type: DataTypes.ARRAY(DataTypes.INTEGER),
+            defaultValue: []
         },
 
         logo: {
