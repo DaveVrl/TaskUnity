@@ -20,10 +20,6 @@ const Cards = (sequelize) => {
             type: DataTypes.STRING
         },
 
-        comments: {
-            type: DataTypes.ARRAY(DataTypes.STRING)
-        },
-
         position: {
             type: DataTypes.INTEGER
         },
