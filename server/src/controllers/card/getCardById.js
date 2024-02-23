@@ -1,4 +1,4 @@
-const { Cards } = require('../../db');
+const { Cards , Comments } = require('../../db');
 
 const getCardById = async (req  , res) => {
 
@@ -6,7 +6,7 @@ const getCardById = async (req  , res) => {
 
         const { id } = req.params;
 
-        const data = await Cards.findByPk(id);
+        const data = await Cards.findByPk(id,{ include: Comments });
 
         return res.status(200).json(data);
 
