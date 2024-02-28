@@ -1,12 +1,14 @@
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import NavDropdown from 'react-bootstrap/NavDropdown';
-import NavDropdownBoards from './NavDropdownBoards';
 
+import NavDropdownBoards from './NavDropdownBoards';
+import NavDropdownProfile from './NavDropdownProfile';
 
 const NavContainer = () => {
-    
+  
+  const condicional = true;
+
     return (
         <Navbar bg="dark" data-bs-theme="dark" collapseOnSelect expand="lg" className="bg-body-tertiary">
           <Container>
@@ -15,15 +17,11 @@ const NavContainer = () => {
             <Navbar.Collapse id="navbarScroll">
               <Nav className="me-auto my-0 my-lg-0"
             style={{ maxHeight: '200px' }} navbarScroll>
-              <NavDropdownBoards/>
+              { condicional ? null : <NavDropdownBoards/>}
               </Nav>
               <Nav>
-                <NavDropdown title="Profile" id="collapsible-nav-dropdown">
-                <NavDropdown.Item href="#action/3.5">Mi cuenta</NavDropdown.Item>
-                <NavDropdown.Divider />
-                <NavDropdown.Item href="#action/3.6">Cerrar Sesión</NavDropdown.Item>
-                </NavDropdown>
-                <Nav.Link href="#deets">About</Nav.Link>
+                { condicional ? <Nav.Link href="">Login</Nav.Link> : <NavDropdownProfile/> }
+                <Nav.Link href="">About</Nav.Link>
               </Nav>
             </Navbar.Collapse>
           </Container>

@@ -1,0 +1,45 @@
+.container {
+    background-image: linear-gradient(to left bottom, #d16ba5, #c777b9, #ba83ca, #aa8fd8, #9a9ae1, #8aa7ec, #79b3f4, #69bff8, #52cffe, #41dfff, #46eefa, #5ffbf1);
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    color: whitesmoke;
+    padding: 20px 12px 0px;
+}
+
+Button {
+    align-self: center;
+}
+
+.container h1 {
+    margin-bottom: 20px;
+    text-shadow: 1px 1px 2px black; 
+}
+
+.container h4 {
+    margin-bottom: 20px;
+    text-shadow: 1px 1px 0px black;
+}
+
+.container h5 {
+    color: white;
+    text-shadow: 1px 1px 0px black;
+}
+
+.container_h5_btn h5 {
+    align-self: center;
+    margin-bottom: 20px;
+    color: whitesmoke;
+    text-shadow: none;
+    text-shadow: 1px 1px 1px black;
+}
+
+.container_h5_btn {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #2B3035;
+    height: 200px;
+    border-radius: 12px;
+    max-width: 400px;
+}

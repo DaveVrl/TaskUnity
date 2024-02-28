@@ -31,8 +31,6 @@ const NavDropdownBoards = () => {
                   <NavDropdown.Item href="#action/3.13">Projecto13</NavDropdown.Item>
                   <NavDropdown.Divider />
                   <NavDropdown.Item href="#action/3.14">Projecto14</NavDropdown.Item>
-                  <NavDropdown.Divider />
-                  <NavDropdown.Item href="#action/3.15">Projecto15</NavDropdown.Item>
                 </NavDropdown>
     )
 };
