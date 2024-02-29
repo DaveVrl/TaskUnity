@@ -1,45 +1,96 @@
 .container {
-    background-image: linear-gradient(to left bottom, #d16ba5, #c777b9, #ba83ca, #aa8fd8, #9a9ae1, #8aa7ec, #79b3f4, #69bff8, #52cffe, #41dfff, #46eefa, #5ffbf1);
     display: flex;
     flex-direction: column;
-    height: 100vh;
-    color: whitesmoke;
-    padding: 20px 12px 0px;
-}
-
-Button {
-    align-self: center;
+    color: white;
+    background-color: white;
 }
 
 .container h1 {
-    margin-bottom: 20px;
-    text-shadow: 1px 1px 2px black; 
+    margin-bottom: 0px;
+    text-shadow: 1px 1px 0px black;
+    font-family: "Nunito", sans-serif;
+    font-weight: 600;
+    font-size: 44px;
+    padding: 0 12px;
+
 }
 
-.container h4 {
-    margin-bottom: 20px;
-    text-shadow: 1px 1px 0px black;
+.container h1 span {
+    text-decoration-line: underline;
+    text-decoration-color: #2B3035;
+    
 }
 
-.container h5 {
-    color: white;
-    text-shadow: 1px 1px 0px black;
+.container_h1_img_h5 {
+    display: flex;
+    flex-direction: column;
+    background-image: linear-gradient(135deg, #FFA6B7 10%, #1E2AD2 100%);
+    padding-top: 12px;
+}
+
+.image_pc {
+    align-self: center;
+    width: 300px;
+}
+
+.container_h1_img_h5 h5 {
+    font-weight: 400;
+    margin-bottom: 28px;
+    padding: 0 12px;
+}
+
+.container_h5 {
+    display: flex;
+    flex-direction: column;
+    padding: 28px 12px 0;
+    align-items: center;
+    background-color: rgb(30, 30, 30);
+}
+
+.container_h5_row {
+    display: flex;
+    margin-bottom: 28px;
+}
+
+.curve_white  {
+    width: 100vw;
+    transform: scaleX(-1);
+}
+
+.container_h5 h5 {
+    font-weight: 400;
+    margin-bottom: 0;   
+}
+
+.image_board {
+    height: 140px;
+    transform: scaleX(-1);
+}
+
+.curve_black  {
+    padding: 0;
+    width: 100vw;
+    transform: scaleX(-1);
+    filter: invert(88.2%);
 }
 
 .container_h5_btn h5 {
     align-self: center;
     margin-bottom: 20px;
-    color: whitesmoke;
+    color: black;
     text-shadow: none;
-    text-shadow: 1px 1px 1px black;
+    font-weight: 500;
 }
 
 .container_h5_btn {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    background-color: #2B3035;
-    height: 200px;
     border-radius: 12px;
-    max-width: 400px;
+    margin: 28px auto;
+}
+
+.container_h5_btn Button {
+    align-self: center;
+    width:180px;
+    height:60px;
 }
