@@ -1,0 +1,96 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    color: white;
+    background-color: white;
+}
+
+.container h1 {
+    margin-bottom: 0px;
+    text-shadow: 1px 1px 0px black;
+    font-family: "Nunito", sans-serif;
+    font-weight: 600;
+    font-size: 44px;
+    padding: 0 12px;
+
+}
+
+.container h1 span {
+    text-decoration-line: underline;
+    text-decoration-color: #2B3035;
+    
+}
+
+.container_h1_img_h5 {
+    display: flex;
+    flex-direction: column;
+    background-image: linear-gradient(135deg, #FFA6B7 10%, #1E2AD2 100%);
+    padding-top: 12px;
+}
+
+.image_pc {
+    align-self: center;
+    width: 300px;
+}
+
+.container_h1_img_h5 h5 {
+    font-weight: 400;
+    margin-bottom: 28px;
+    padding: 0 12px;
+}
+
+.container_h5 {
+    display: flex;
+    flex-direction: column;
+    padding: 28px 12px 0;
+    align-items: center;
+    background-color: rgb(30, 30, 30);
+}
+
+.container_h5_row {
+    display: flex;
+    margin-bottom: 28px;
+}
+
+.curve_white  {
+    width: 100vw;
+    transform: scaleX(-1);
+}
+
+.container_h5 h5 {
+    font-weight: 400;
+    margin-bottom: 0;   
+}
+
+.image_board {
+    height: 140px;
+    transform: scaleX(-1);
+}
+
+.curve_black  {
+    padding: 0;
+    width: 100vw;
+    transform: scaleX(-1);
+    filter: invert(88.2%);
+}
+
+.container_h5_btn h5 {
+    align-self: center;
+    margin-bottom: 20px;
+    color: black;
+    text-shadow: none;
+    font-weight: 500;
+}
+
+.container_h5_btn {
+    display: flex;
+    flex-direction: column;
+    border-radius: 12px;
+    margin: 28px auto;
+}
+
+.container_h5_btn Button {
+    align-self: center;
+    width:180px;
+    height:60px;
+}
