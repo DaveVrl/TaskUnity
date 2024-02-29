@@ -15,7 +15,6 @@ const Landing = () => {
         <h5>Gestiona tus proyectos personales y grupales de forma ordenada basándote en la metodología Scrum.</h5>
         <img className={style.curve_black} src={curve} alt="curve" />
         </div>
-
         <div className={style.container_h5}>
         <div className={style.container_h5_row}>
         <h5>La aplicación está inspirada en Trello y Jira, ofreciendo el mismo ordenamiento de Tablas, Listas y Tarjetas.</h5>

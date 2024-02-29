@@ -50,11 +50,13 @@
 .container_h5_row {
     display: flex;
     margin-bottom: 28px;
+    align-items: center;
 }
 
 .curve_white  {
     width: 100vw;
     transform: scaleX(-1);
+    height: 29px;
 }
 
 .container_h5 h5 {
@@ -68,10 +70,10 @@
 }
 
 .curve_black  {
-    padding: 0;
     width: 100vw;
     transform: scaleX(-1);
     filter: invert(88.2%);
+    height: 29px;
 }
 
 .container_h5_btn h5 {
