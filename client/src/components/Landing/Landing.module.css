@@ -75,17 +75,19 @@
 
 .container_h5_btn h5 {
     align-self: center;
-    margin-bottom: 20px;
-    color: black;
+    margin-bottom: 24px;
+    color: rgb(30, 30, 30);
     text-shadow: none;
-    font-weight: 500;
+    font-weight: 600;
+    font-size: 1.28rem;
 }
 
 .container_h5_btn {
     display: flex;
     flex-direction: column;
+    text-align: center;
     border-radius: 12px;
-    margin: 28px auto;
+    margin: 78px auto;
 }
 
 .container_h5_btn Button {
