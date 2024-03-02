@@ -1,23 +1,98 @@
 .container {
-    height: 100vh;
-    background-image: linear-gradient(135deg, #FFA6B7 10%, #1E2AD2 100%);
+    
     color: white;
 }
 
-.first_container {
-    padding: 20px 12px 0;
+.container hr {
+    margin-top: 0px;
+    margin-bottom: 8px;
+    height: 2px;
+    background-color: white;
 }
 
 .first_container h1 , .second_container h2 {
     text-shadow: 1px 1px 0px black;
-    font-size: 30px;
-    margin-left: 10px;
+    font-size: 36px;
+    font-weight: 600;
+    margin-bottom: 0;
+    /* text-decoration: underline #2B3035; */
 }
 
-.first_container p , .second_container p {
+.paragraphs {
+    background-color: rgb(30, 30, 30);
+    padding: 18px 20px 18px;
+    
+}
+
+.first_container p {
     font-size: 1.20rem;
+    margin-bottom: 0;
 }
 
-.second_container {
+.paragraphs_2 {
+    padding: 18px 20px 18px;
+}
+
+.second_container p{
+    font-size: 1.20rem;
+    margin-bottom: 0;
+    color: rgb(30, 30, 30);
+    font-weight: 600;
+}
+
+.h1_img_curve {
+    background-image: linear-gradient(135deg, #FFA6B7 10%, #1E2AD2 100%);
+}
+
+.h1_img {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px 12px 0;
+}
+
+.curve_black  {
+    width: 100vw;
+    filter: invert(88.2%);
+    position: relative;
+    bottom: -1px;
+}
+
+.imgRoboto {
+    width: 200px;
+    align-self: center;
+}
+
+.h2_img_curve {
+    background-image: linear-gradient(135deg, #FFA6B7 10%, #1E2AD2 100%);
+}
+
+.curve_black_invert {
+    width: 100vw;
+    position: relative;
+    filter: invert(88.2%);
+    top: -2px; /*Con 1 se ve la linea*/
+    transform: scaleY(-1) scaleX(-1);
+}
+
+.h2_img {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
     padding: 0 12px 0;
+}
+
+.h2_img h2 {
+    text-align: center;
+}
+
+.imgContact {
+    width: 200px;
+    align-self: center;
+}
+
+.curve_white  {
+    width: 100vw;
+    position: relative;
+    bottom: -1px;      
 }
