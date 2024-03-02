@@ -1,0 +1,18 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(43,48,53, 1);
+    height: 30px;
+    font-size: 14px;
+}
+
+.container p {
+    color: white;
+    margin: 0;
+}
+
+.container a {
+    text-decoration: none;
+    color: #0D6EFD;
+}
