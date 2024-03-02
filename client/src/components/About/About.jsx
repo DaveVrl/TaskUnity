@@ -36,12 +36,12 @@ const About = () => {
             <p>Allí encontrarás una muestra de mis proyectos y podrás contactarme a través de mis principales redes sociales.</p>
             <p>¡Espero poder conectar contigo pronto y colaborar en futuros proyectos juntos!</p>
             <Button 
-            style={{ display: 'flex', justifyContent:'center', alignItems: 'center', margin:'18px auto 18px', width:'180px', height:'60px', textAlign:'center'}}
+            style={{ display: 'flex', justifyContent:'center', alignItems: 'center', margin:'20px auto 20px', width:'180px', height:'60px', textAlign:'center'}}
             variant="primary" 
             size="lg"
             href='https://dave-vrl.pages.dev/'
             >
-            Portfolio
+            Ir a Portfolio
             </Button>
             </div>
             </div>
