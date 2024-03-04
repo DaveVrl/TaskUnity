@@ -109,3 +109,51 @@
     user-select: none;
     -webkit-user-drag: none;
 }
+
+/*//////////////////////////////////////////////*/
+
+@media (min-width: 768px) {
+    .container_h1_img_h5 {
+        padding-top: 34px;
+    }
+
+    .container_h1_img_h5 h1 {
+        padding: 0 8%;
+        font-size: 46px;
+    }
+
+    .image_pc {
+        margin: 20px auto;
+        width: 340px;
+    }
+
+    .container_h1_img_h5 h5 , .container_h5 h5 {
+        padding: 0 8%;
+        font-size: 1.3rem;
+        text-align: center;
+    }
+
+    .container_h1_img_h5 h5 {
+        margin-bottom: 30px;
+    }
+
+    .container_h5 {
+        padding-top: 31px;
+    }
+
+    .boardImg {
+        margin: 20px 0 42px;
+        width: 300px;
+    }
+
+    .container_h5_btn {
+        margin: 89px auto 88px;
+    }
+
+    .container_h5_btn h5 {
+        font-size: 1.3rem;
+    }
+}
+
+/*//////////////////////////////////////////////*/
+

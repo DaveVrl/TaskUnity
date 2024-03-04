@@ -5,15 +5,6 @@
     padding: 0 12px;
 }
 
-.title_content {
-}
-
-.title_content h6 {
-    font-weight: 300;
-    font-size: 1.25rem;
-    margin-bottom: 0;
-}
-
 .buttons {
     display: flex;
     gap: 20px;
@@ -35,3 +26,13 @@
     transform: scale(1.5);
     transition:  0.3s;
 }
+
+/*//////////////////////////////////////////////*/
+
+@media (min-width: 768px) {
+    .buttons {
+        margin: 48px 0 29px;
+    }
+}
+
+/*//////////////////////////////////////////////*/
