@@ -1,6 +1,6 @@
 .container {
-    
     color: white;
+    overflow: hidden; /*Para corregir Curves*/
 }
 
 .container hr {
@@ -56,11 +56,15 @@
     filter: invert(88.2%);
     position: relative;
     bottom: -1px;
+    user-select: none;
+    -webkit-user-drag: none;
 }
 
 .imgRoboto {
     width: 200px;
     align-self: center;
+    user-select: none;
+    -webkit-user-drag: none;
 }
 
 .h2_img_curve {
@@ -73,6 +77,8 @@
     filter: invert(88.2%);
     top: -2px; /*Con 1 se ve la linea*/
     transform: scaleY(-1) scaleX(-1);
+    user-select: none;
+    -webkit-user-drag: none;
 }
 
 .h2_img {
@@ -89,10 +95,14 @@
 .imgContact {
     width: 200px;
     align-self: center;
+    user-select: none;
+    -webkit-user-drag: none;
 }
 
 .curve_white  {
     width: 100vw;
     position: relative;
     bottom: -1px;      
+    user-select: none;
+    -webkit-user-drag: none;
 }

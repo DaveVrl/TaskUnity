@@ -3,6 +3,7 @@
     flex-direction: column;
     color: white;
     background-color: white;
+    overflow: hidden; /*Para corregir Curves*/
 }
 
 .container h1 {
@@ -31,6 +32,8 @@
 .image_pc {
     align-self: center;
     width: 300px;
+    user-select: none;
+    -webkit-user-drag: none;
 }
 
 .container_h1_img_h5 h5 {
@@ -58,6 +61,8 @@
     width: 100vw;
     position: relative;
     bottom: -1px;      
+    user-select: none;
+    -webkit-user-drag: none;
 }
 
 .container_h5 h5 {
@@ -70,6 +75,8 @@
     filter: invert(88.2%);
     position: relative;
     bottom: -1px;
+    user-select: none;
+    -webkit-user-drag: none;
 }
 
 .container_h5_btn h5 {
@@ -99,4 +106,6 @@
     margin-bottom: 24px;
     width: 260px;
     align-self: center;
+    user-select: none;
+    -webkit-user-drag: none;
 }
