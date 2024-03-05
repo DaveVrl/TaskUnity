@@ -1,13 +1,6 @@
 .container {
-    
     color: white;
-}
-
-.container hr {
-    margin-top: 0px;
-    margin-bottom: 8px;
-    height: 2px;
-    background-color: white;
+    overflow: hidden; /*Para corregir Curves*/
 }
 
 .first_container h1 , .second_container h2 {
@@ -56,11 +49,15 @@
     filter: invert(88.2%);
     position: relative;
     bottom: -1px;
+    user-select: none;
+    -webkit-user-drag: none;
 }
 
 .imgRoboto {
     width: 200px;
     align-self: center;
+    user-select: none;
+    -webkit-user-drag: none;
 }
 
 .h2_img_curve {
@@ -73,6 +70,8 @@
     filter: invert(88.2%);
     top: -2px; /*Con 1 se ve la linea*/
     transform: scaleY(-1) scaleX(-1);
+    user-select: none;
+    -webkit-user-drag: none;
 }
 
 .h2_img {
@@ -89,10 +88,39 @@
 .imgContact {
     width: 200px;
     align-self: center;
+    user-select: none;
+    -webkit-user-drag: none;
 }
 
 .curve_white  {
     width: 100vw;
     position: relative;
     bottom: -1px;      
+    user-select: none;
+    -webkit-user-drag: none;
+}
+
+/*//////////////////////////////////////////////*/
+
+@media (min-width: 320px) {
+    .imgRoboto , .imgContact { width: 180px;}
+}
+
+@media (min-width:500px) {
+    .first_container h1 , .second_container h1 {
+        font-size: 38px;
+    }
+
+    .paragraphs , .paragraphs_2 {
+        padding: 88px 8%;
+    }
+
+    .first_container p , .second_container p {
+        font-size: 1.25rem;
+        padding: 6px 0;
+    }
+
+    .endP p{
+        padding-bottom: 30px;
+    }
 }

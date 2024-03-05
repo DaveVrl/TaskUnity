@@ -34,9 +34,9 @@ const About = () => {
             <div className={style.paragraphs_2}>
             <p>Si estás interesado en saber más sobre mí y mi trabajo, te invito a visitar mi Portfolio.</p>
             <p>Allí encontrarás una muestra de mis proyectos y podrás contactarme a través de mis principales redes sociales.</p>
-            <p>¡Espero poder conectar contigo pronto y colaborar en futuros proyectos juntos!</p>
+            <div className={style.endP}><p>¡Espero poder conectar contigo pronto y colaborar en futuros proyectos juntos!</p></div>
             <Button 
-            style={{ display: 'flex', justifyContent:'center', alignItems: 'center', margin:'20px auto 20px', width:'180px', height:'60px', textAlign:'center'}}
+            style={{ display: 'flex', justifyContent:'center', alignItems: 'center', margin:'24px auto 24px', width:'180px', height:'60px', textAlign:'center'}}
             variant="primary" 
             size="lg"
             href='https://dave-vrl.pages.dev/'
