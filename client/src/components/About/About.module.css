@@ -3,13 +3,6 @@
     overflow: hidden; /*Para corregir Curves*/
 }
 
-.container hr {
-    margin-top: 0px;
-    margin-bottom: 8px;
-    height: 2px;
-    background-color: white;
-}
-
 .first_container h1 , .second_container h2 {
     text-shadow: 1px 1px 0px black;
     font-size: 36px;
@@ -105,4 +98,29 @@
     bottom: -1px;      
     user-select: none;
     -webkit-user-drag: none;
+}
+
+/*//////////////////////////////////////////////*/
+
+@media (min-width: 320px) {
+    .imgRoboto , .imgContact { width: 180px;}
+}
+
+@media (min-width:500px) {
+    .first_container h1 , .second_container h1 {
+        font-size: 38px;
+    }
+
+    .paragraphs , .paragraphs_2 {
+        padding: 88px 8%;
+    }
+
+    .first_container p , .second_container p {
+        font-size: 1.25rem;
+        padding: 6px 0;
+    }
+
+    .endP p{
+        padding-bottom: 30px;
+    }
 }

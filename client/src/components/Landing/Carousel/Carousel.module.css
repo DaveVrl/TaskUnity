@@ -29,7 +29,7 @@
 
 /*//////////////////////////////////////////////*/
 
-@media (min-width: 768px) {
+@media (min-width: 500px) {
     .buttons {
         margin: 48px 0 29px;
     }

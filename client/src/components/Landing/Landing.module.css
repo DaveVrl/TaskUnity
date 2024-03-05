@@ -112,7 +112,7 @@
 
 /*//////////////////////////////////////////////*/
 
-@media (min-width: 768px) {
+@media (min-width: 500px) {
     .container_h1_img_h5 {
         padding-top: 34px;
     }
@@ -152,6 +152,7 @@
 
     .container_h5_btn h5 {
         font-size: 1.3rem;
+        margin-bottom: 38px;
     }
 }
 
