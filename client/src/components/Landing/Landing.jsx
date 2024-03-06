@@ -2,7 +2,7 @@ import style from './Landing.module.css';
 import Button from 'react-bootstrap/Button';
 import imagePc from '../../assets/scrum.png'
 import curve from '../../assets/desktop-curve.svg';
-import imageBoard from '../../assets/roboto-image-cut.png';
+
 import Carousel from './Carousel/Carousel';
 
 const Landing = () => {
@@ -26,7 +26,7 @@ const Landing = () => {
 
         <div className={style.container_h5_row}>
         <h5>La aplicación está inspirada en Trello y Jira, ofreciendo el mismo ordenamiento de Tableros, Listas y Tarjetas.</h5>
-        <img className={style.boardImg} src={imageBoard} alt="board" />
+        
       
         </div>
         
