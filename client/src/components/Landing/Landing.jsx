@@ -2,7 +2,7 @@ import style from './Landing.module.css';
 import Button from 'react-bootstrap/Button';
 import imagePc from '../../assets/scrum.png'
 import curve from '../../assets/desktop-curve.svg';
-import imageBoard from '../../assets/scrum-board.png';
+import imageBoard from '../../assets/roboto-image-cut.png';
 import Carousel from './Carousel/Carousel';
 
 const Landing = () => {
@@ -18,6 +18,7 @@ const Landing = () => {
         </div>
 
         <h5>Gestiona tus proyectos personales y grupales de forma ordenada basándote en la metodología Scrum.</h5>
+
         <img className={style.curve_black} src={curve} alt="curve" />
         </div>
 
