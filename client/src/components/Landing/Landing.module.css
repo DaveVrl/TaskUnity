@@ -25,8 +25,14 @@
 .container_h1_img_h5 {
     display: flex;
     flex-direction: column;
-    background-image: linear-gradient(135deg, #FFA6B7 10%, #1E2AD2 100%);
+    /* background-image: linear-gradient(135deg, #FFA6B7 10%, #1E2AD2 100%); Muy parecido a Trello*/
+    background: linear-gradient(-45deg, rgba(80, 3, 170, 1.0), rgba(104, 252, 185, 1.0));
     padding-top: 12px;
+}
+
+.container_h1_imagePc {
+    display: flex;
+    flex-direction: column;
 }
 
 .image_pc {
@@ -34,6 +40,7 @@
     width: 300px;
     user-select: none;
     -webkit-user-drag: none;
+    filter:drop-shadow(-4px 4px 0.8px black);
 }
 
 .container_h1_img_h5 h5 {
@@ -52,6 +59,7 @@
 
 .container_h5_row {
     display: flex;
+    flex-direction: column;
     margin-bottom: 24px;
     align-items: center;
     padding: 0 12px;
@@ -63,6 +71,7 @@
     bottom: -1px;      
     user-select: none;
     -webkit-user-drag: none;
+    transform: scaleX(-1);
 }
 
 .container_h5 h5 {
@@ -77,6 +86,7 @@
     bottom: -1px;
     user-select: none;
     -webkit-user-drag: none;
+    transform: scaleX(-1);
 }
 
 .container_h5_btn h5 {
@@ -103,11 +113,12 @@
 }
 
 .boardImg {
-    margin-bottom: 24px;
     width: 260px;
+    margin-top: 24px;
     align-self: center;
     user-select: none;
     -webkit-user-drag: none;
+    filter:drop-shadow(-4px 4px 0.8px black);
 }
 
 /*//////////////////////////////////////////////*/
@@ -142,8 +153,12 @@
     }
 
     .boardImg {
-        margin: 20px 0 42px;
+        margin: 28px 0 0;
         width: 300px;
+    }
+
+    .container_h5_row {
+        margin-bottom: 28px;
     }
 
     .container_h5_btn {
@@ -158,3 +173,83 @@
 
 /*//////////////////////////////////////////////*/
 
+@media (min-width: 1024px) {
+    .container h5 {
+        text-align: start;
+    }
+
+    .container_h1_img_h5 {
+        padding-top: 20px;
+        display: block;
+    }
+
+    .container_h1_imagePc {
+        flex-direction: row-reverse;
+        max-width: 1280px;
+        margin: 0 auto;
+        align-items: center;
+        padding: 0 20px;
+    }
+
+    .container_h1_imagePc h1 {
+        padding: 0;
+        text-align: right;
+        font-size: 58px;
+    }
+
+    .container_h1_imagePc span {
+        font-size: 78px;
+    }
+
+    .image_pc {
+        margin: 0;
+        width: 360px;
+    }
+
+    .container_h1_img_h5 h5 {
+        padding: 0 20px;
+        margin: 0 auto 0;
+        max-width: 1280px;
+        font-size: 1.65rem;
+    }
+
+    .container_h5 {
+        padding-top: 0px;
+    }
+
+    .container_h5 h5 {
+        font-size: 1.5rem;
+    }
+
+    .container_h5_row h5 {
+        padding: 0;
+    }
+
+    .container_h5_row {
+        flex-direction: row;
+        align-items: center;
+        padding: 0 21px;
+        max-width: 1280px;
+        margin: 0 auto;
+    }
+
+    .boardImg {
+        margin-top: 0;
+        width: 260px;
+    }
+
+    .container_h5_btn {
+        margin: 29px auto 92px;
+    }
+}
+
+/*////////////////////////////////////////////// Detalles */
+
+@media(min-width: 1208px) {
+    .container_h1_imagePc h1 {
+        padding: 0;
+        text-align: right;
+        font-size: 58px;
+        margin-left: 74px;
+    }
+}

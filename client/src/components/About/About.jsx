@@ -1,5 +1,5 @@
 import style from './About.module.css';
-import imgRoboto from '../../assets/roboto-image-cut.png';
+import imgRoboto from '../../assets/image-about.png';
 import imgContact from '../../assets/conctact-image.png';
 import curve from '../../assets/desktop-curve.svg';
 import { Button } from 'react-bootstrap';
