@@ -12,8 +12,11 @@ const Landing = () => {
 
         <div className={style.container_h1_img_h5}>
 
+        <div className={style.container_h1_imagePc}>
         <h1>Amplifica tu productividad con <span>TaskUnity</span></h1>
         <img className={style.image_pc} src={imagePc} alt="scrum-pc" />
+        </div>
+
         <h5>Gestiona tus proyectos personales y grupales de forma ordenada basándote en la metodología Scrum.</h5>
         <img className={style.curve_black} src={curve} alt="curve" />
         </div>
@@ -22,8 +25,10 @@ const Landing = () => {
 
         <div className={style.container_h5_row}>
         <h5>La aplicación está inspirada en Trello y Jira, ofreciendo el mismo ordenamiento de Tableros, Listas y Tarjetas.</h5>
-        </div>
         <img className={style.boardImg} src={imageBoard} alt="board" />
+      
+        </div>
+        
         <Carousel/>
         <img className={style.curve_white} src={curve} alt="curve"/>
         </div>
