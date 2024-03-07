@@ -57,13 +57,11 @@
     background-color: rgb(30, 30, 30);
 }
 
-.container_h5_row {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 24px;
-    align-items: center;
+.container_h5 h5 {
+    margin-bottom: 10px;
     padding: 0 12px;
 }
+
 /*Con position y bottom corrijo el error visual que se mostraba debajo de la curva al hacer zoom*/
 .curve_white  {
     width: 100vw;
@@ -112,15 +110,6 @@
     height:60px;
 }
 
-.boardImg {
-    width: 260px;
-    margin-top: 24px;
-    align-self: center;
-    user-select: none;
-    -webkit-user-drag: none;
-    filter:drop-shadow(-4px 4px 0.8px black);
-}
-
 /*//////////////////////////////////////////////*/
 
 @media (min-width: 500px) {
@@ -155,10 +144,6 @@
     .boardImg {
         margin: 28px 0 0;
         width: 300px;
-    }
-
-    .container_h5_row {
-        margin-bottom: 28px;
     }
 
     .container_h5_btn {
@@ -218,17 +203,8 @@
     }
 
     .container_h5 h5 {
-        font-size: 1.5rem;
-    }
-
-    .container_h5_row h5 {
-        padding: 0;
-    }
-
-    .container_h5_row {
-        flex-direction: row;
-        align-items: center;
-        padding: 0 21px;
+        font-size: 1.65rem;
+        padding: 0 20px;
         max-width: 1280px;
         margin: 0 auto;
     }
@@ -240,6 +216,15 @@
 
     .container_h5_btn {
         margin: 29px auto 92px;
+    }
+
+    .container_h5_btn h5 {
+        font-size: 1.65rem;
+    }
+
+    .container_h5_btn Button {
+        width:220px;
+        height:70px;
     }
 }
 

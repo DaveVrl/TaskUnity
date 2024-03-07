@@ -7,7 +7,7 @@ const BookletTwo = () => {
         <div>
             <div className={style.container}>
             <img src={image} alt="board-image" />
-            <p>Las Listas te ayudarán a llevar el flujo de tu trabajo, indicando el estado de las tareas como pendientes, en curso o finalizadas.</p>
+            <h5>Las Listas te ayudarán a llevar el flujo de tu trabajo, indicando el estado de las tareas como pendientes, en curso o finalizadas.</h5>
         </div>
         </div>
     )
