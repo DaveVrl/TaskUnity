@@ -24,11 +24,8 @@ const Landing = () => {
 
         <div className={style.container_h5}>
 
-        <div className={style.container_h5_row}>
-        <h5>La aplicación está inspirada en Trello y Jira, ofreciendo el mismo ordenamiento de Tableros, Listas y Tarjetas.</h5>
-        
       
-        </div>
+        <h5>La aplicación está inspirada en Trello y Jira, ofreciendo el mismo ordenamiento de Tableros, Listas y Tarjetas.</h5>
         
         <Carousel/>
         <img className={style.curve_white} src={curve} alt="curve"/>

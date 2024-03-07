@@ -30,3 +30,32 @@
     filter:drop-shadow(-4px 4px 0.8px black);
 }
 
+/*//////////////////////////////////////////////*/
+
+@media(min-width: 500px) {
+    .container h5 {
+        font-size: 1.3rem;
+        text-align: center;
+    }
+
+    .container img {
+        width: 340px;
+        height: 340px;
+    }
+}
+
+/*//////////////////////////////////////////////*/
+
+@media (min-width: 1024px) {
+    .container {
+        flex-direction: row-reverse;
+    }
+
+    .container h5 {
+        margin-top: 0;
+        font-size: 1.6rem;
+        text-align: start;
+    }
+}
+
+
