@@ -89,7 +89,7 @@
 
 .container_h5_btn h5 {
     align-self: center;
-    margin-bottom: 24px;
+    margin-bottom: 30px;
     color: rgb(30, 30, 30);
     text-shadow: none;
     font-weight: 600;
@@ -108,6 +108,22 @@
     align-self: center;
     width:180px;
     height:60px;
+}
+
+.container_h5_btn h4 {
+    font-size: 1.24rem;
+    font-weight: 500;
+    margin-top: 30px;
+    margin-bottom: 0;
+    color: black;
+    padding: 0 12px;
+}
+
+.container_h5_btn a {
+    font-weight: 700;
+    color: #0D6EFD !important;
+    text-decoration: 2px underline !important;
+    cursor: pointer;
 }
 
 /*//////////////////////////////////////////////*/
@@ -153,6 +169,11 @@
     .container_h5_btn h5 {
         font-size: 1.3rem;
         margin-bottom: 38px;
+    }
+
+    .container_h5_btn h4 {
+        margin-top: 38px;
+        font-size: 1.3rem;
     }
 }
 
@@ -225,7 +246,14 @@
     .container_h5_btn Button {
         width:220px;
         height:70px;
+        font-size: 1.65rem;
     }
+
+    .container_h5_btn h4 {
+        font-size: 1.65rem;
+        font-weight: 400;
+    }
+    
 }
 
 /*////////////////////////////////////////////// Detalles */

@@ -6,7 +6,7 @@ const BookletOne = () => {
     return (
         <div className={style.container}>
             <img src={image} alt="board-image" />
-            <h5>El Tablero permite mantener tu proyecto organizado, podrás observar todo lo que se esté desarrollando en tan solo un vistazo.</h5>
+            <h5>El Tablero permite mantener tu proyecto organizado, observarás todo lo que se esté desarrollando en tan solo un vistazo.</h5>
         </div>
     )
 };
