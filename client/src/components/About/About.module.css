@@ -223,6 +223,7 @@
         max-width: 1280px;
         margin: 0 auto;
         padding-bottom: 10px;
+        text-shadow: 1px 1px 1px black;
     }
 
     .h1_img {
@@ -237,6 +238,4 @@
     .btn {
         margin-top: 40px;
     }
-
-    
 }
