@@ -19,12 +19,13 @@
 
 .paragraphs_2 {
     padding: 18px 20px 18px;
+    background: linear-gradient(180deg, rgba(80, 3, 170, 1.0), rgba(104, 252, 185, 1.0));
 }
 
 .second_container p{
     font-size: 18px;
     margin-bottom: 0;
-    color: rgb(30, 30, 30);
+    color: white;
     font-weight: 500;
     padding-bottom: 18px;
 }
@@ -52,11 +53,12 @@
     transform: scaleX(-1);
 }
 
-.imgRoboto {
+.imgAbout {
     width: 108px;
     align-self: center;
     user-select: none;
     -webkit-user-drag: none;
+    filter: drop-shadow(-4px 4px 0.8px black);
 }
 
 .h2_img_curve {
@@ -83,6 +85,8 @@
 
 .h2_img h2 {
     text-align: center;
+    text-decoration: underline 4px;
+    text-decoration-color: #2B3035;
 }
 
 .imgContact {
@@ -90,15 +94,7 @@
     align-self: center;
     user-select: none;
     -webkit-user-drag: none;
-}
-
-.curve_white  {
-    width: 100vw;
-    position: relative;
-    bottom: -1px;      
-    user-select: none;
-    -webkit-user-drag: none;
-    transform: scaleX(-1);
+    filter: drop-shadow(-4px 4px 0.8px black);
 }
 
 .paragraphs summary {
@@ -123,7 +119,7 @@
 .btn  {
     width: 160px;
     height: 60px;
-    margin: 10px auto 40px;
+    margin: 20px auto 40px;
 }
 
 .btn[href] {  /*Modificar texto btn React-Bootstrap*/
@@ -131,6 +127,13 @@
     justify-content: center;
     align-items: center;
 }
+
+/* .backgrounContactP {
+    border: 1px solid rgba(0, 0, 0, 0.45);
+    border-radius: 10px;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.45);
+} */
 
 /*//////////////////////////////////////////////*/
 
@@ -166,8 +169,74 @@
 /*//////////////////////////////////////////////*/
 
 @media (min-width: 1024px) {
-    .h5_expanded:hover {
+    .first_container h1 , .second_container h2 {
+        font-size: 42px;
+    }
+
+    .paragraphs summary:hover {
         background-color: rgba(245, 245, 245, 0.336);
         transition: 0.6s;
     }
+
+    .paragraphs summary {
+        max-width: 1280px;
+        margin: 0 auto 10px;
+        font-size: 22px;
+    }
+
+    .backgroundParagraphs {
+        max-width: 1280px;
+        margin: 0 auto;
+        padding: 16px;
+    }
+
+    .backgroundParagraphs p {
+        font-size: 20px;
+    }
+
+    .paragraphs hr {
+        max-width: 1280px;
+        margin: 16px auto;
+    }
+
+    .second_container p {
+        
+        max-width: 1280px;
+        margin: 0 auto;
+        font-size: 22px;
+    }
+    
+    .btn {
+        width: 220px;
+        height: 70px;
+    }
+
+    .btn[href] {
+        font-size: 1.4rem;
+    }
+
+    .paragraphs_2 {
+        padding: 50px;
+    }
+
+    .paragraphs_2 p {
+        max-width: 1280px;
+        margin: 0 auto;
+        padding-bottom: 10px;
+    }
+
+    .h1_img {
+        flex-direction: row;
+    }
+
+    .h1_img h1 {
+        text-decoration: underline 4px;
+    text-decoration-color: #2B3035;
+    }
+
+    .btn {
+        margin-top: 40px;
+    }
+
+    
 }

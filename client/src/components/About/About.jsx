@@ -1,5 +1,5 @@
 import style from './About.module.css';
-import imgRoboto from '../../assets/image-about.png';
+import imgAbout from '../../assets/image-about.png';
 import imgContact from '../../assets/conctact-image.png';
 import curve from '../../assets/desktop-curve.svg';
 import { Button } from 'react-bootstrap';
@@ -13,7 +13,7 @@ const About = () => {
             <div className={style.h1_img_curve}>
             <div className={style.h1_img}>  
             <h1>Acerca del Proyecto</h1>
-            <img className={style.imgRoboto} src={imgRoboto} alt="roboto" />
+            <img className={style.imgAbout} src={imgAbout} alt="roboto" />
             </div>
             <img className={style.curve_black} src={curve} alt="curve" />  
             </div>
@@ -50,14 +50,16 @@ const About = () => {
             <h2>¡Contáctame!</h2>
             <img className={style.imgContact} src={imgContact} alt="card" />
             </div>
-            <img className={style.curve_white} src={curve} alt="curve" /> 
+            {/* <img className={style.curve_white} src={curve} alt="curve" />  */}
             </div>
             <div className={style.paragraphs_2}>
+            <div className={style.backgrounContactP}>
             <p>Si estás interesado en saber sobre mí y mi trabajo, te invito a visitar mi <span>Portfolio.</span></p>
             <p>Allí encontrarás una muestra de mis proyectos y podrás contactarme a través de mis principales redes sociales.</p>
             <p>¡Espero poder conectar contigo pronto y colaborar en futuros proyectos juntos!</p>
+            </div>
             <Button className={style.btn}
-            variant="primary" 
+            variant="dark" 
             size="lg"
             href='https://dave-vrl.pages.dev/'
             >
