@@ -5,7 +5,7 @@
 
 .first_container h1 , .second_container h2 {
     text-shadow: 1px 1px 0px black;
-    font-size: 36px;
+    font-size: 26px;
     font-weight: 600;
     margin-bottom: 0;
     /* text-decoration: underline #2B3035; */
@@ -17,31 +17,29 @@
     
 }
 
-.first_container p {
-    font-size: 1.20rem;
-    margin-bottom: 0;
-}
-
 .paragraphs_2 {
     padding: 18px 20px 18px;
 }
 
 .second_container p{
-    font-size: 1.20rem;
+    font-size: 18px;
     margin-bottom: 0;
     color: rgb(30, 30, 30);
-    font-weight: 600;
+    font-weight: 500;
+    padding-bottom: 18px;
 }
 
 .h1_img_curve {
-    background: linear-gradient(-45deg, rgba(80, 3, 170, 1.0), rgba(104, 252, 185, 1.0));
+    background: linear-gradient(180deg, rgba(80, 3, 170, 1.0), rgba(104, 252, 185, 1.0));
 }
 
 .h1_img {
     display: flex;
+    flex-direction: row-reverse;
     justify-content: space-around;
     align-items: center;
     padding: 10px 12px 0;
+    text-align: center;
 }
 
 .curve_black  {
@@ -55,14 +53,14 @@
 }
 
 .imgRoboto {
-    width: 200px;
+    width: 108px;
     align-self: center;
     user-select: none;
     -webkit-user-drag: none;
 }
 
 .h2_img_curve {
-    background: linear-gradient(-45deg, rgba(80, 3, 170, 1.0), rgba(104, 252, 185, 1.0));
+    background: linear-gradient(0deg, rgba(80, 3, 170, 1.0), rgba(104, 252, 185, 1.0));
 }
 
 .curve_black_invert {
@@ -88,7 +86,7 @@
 }
 
 .imgContact {
-    width: 200px;
+    width: 108px;
     align-self: center;
     user-select: none;
     -webkit-user-drag: none;
@@ -103,26 +101,73 @@
     transform: scaleX(-1);
 }
 
-/*//////////////////////////////////////////////*/
-
-@media (min-width: 320px) {
-    .imgRoboto , .imgContact { width: 180px;}
+.paragraphs summary {
+    cursor: pointer;
+    user-select: none;
+    font-size: 18px;
+    margin-bottom: 10px;
 }
 
+.first_container p {
+    font-size: 16px;
+    margin-bottom: 0;
+}
+
+.backgroundParagraphs {
+    border: 1px solid rgba(255, 255, 255, 0.25);;
+    border-radius: 10px;
+    padding: 10px;
+    background-color: rgb(255 255 255 / 3%);;
+}
+
+.btn  {
+    width: 160px;
+    height: 60px;
+    margin: 10px auto 40px;
+}
+
+.btn[href] {  /*Modificar texto btn React-Bootstrap*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*//////////////////////////////////////////////*/
+
 @media (min-width:500px) {
-    .first_container h1 , .second_container h1 {
-        font-size: 38px;
+    .first_container h1 , .second_container h2 {
+        font-size: 30px;
     }
 
-    .paragraphs , .paragraphs_2 {
+    .paragraphs summary {
+        font-size: 20px;
     }
 
-    .first_container p , .second_container p {
-        font-size: 1.25rem;
+    .first_container p {
+        font-size: 18px;
         padding: 6px 0;
     }
 
-    .endP p{
-        padding-bottom: 30px;
+    .second_container p {
+        font-size: 20px;
+        text-align: center;
+    }
+    
+    .paragraphs , .paragraphs_2 {
+        padding: 20px 40px;
+    }
+
+    .btn {
+        margin-top: 25px;
+    }
+
+}
+
+/*//////////////////////////////////////////////*/
+
+@media (min-width: 1024px) {
+    .h5_expanded:hover {
+        background-color: rgba(245, 245, 245, 0.336);
+        transition: 0.6s;
     }
 }
