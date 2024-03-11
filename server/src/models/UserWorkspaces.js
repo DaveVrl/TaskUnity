@@ -1,12 +1,12 @@
 const { DataTypes } = require("sequelize");
 
-const UserBoards = (sequelize) => {
+const UserWorkspaces = (sequelize) => {
     
-    sequelize.define('user_boards', {
+    sequelize.define('user_workspaces', {
         role: {
             type: DataTypes.STRING
         }
     });
 };
 
-module.exports = UserBoards;
+module.exports = UserWorkspaces;
