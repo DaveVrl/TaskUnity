@@ -41,7 +41,7 @@ const Workspaces = (sequelize) => {
         logo: {
             type: DataTypes.STRING
         }
-    });
+    },{timestamps: false});
 };
 
 module.exports = Workspaces;

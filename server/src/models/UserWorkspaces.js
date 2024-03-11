@@ -6,7 +6,7 @@ const UserWorkspaces = (sequelize) => {
         role: {
             type: DataTypes.STRING
         }
-    });
+    },{timestamps: false});
 };
 
 module.exports = UserWorkspaces;

@@ -33,7 +33,7 @@ const Boards = (sequelize) => {
             type: DataTypes.BOOLEAN,
             defaultValue: true
         }
-    });
+    },{timestamps: false});
 };
 
 module.exports = Boards;
