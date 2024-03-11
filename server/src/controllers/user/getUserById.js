@@ -1,4 +1,4 @@
-const { Users , Boards } = require('../../db');
+const { Users } = require('../../db');
 
 const getUserById = async (req, res) => {
 

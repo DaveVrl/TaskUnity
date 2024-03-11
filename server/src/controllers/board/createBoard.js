@@ -1,31 +1,25 @@
-const { Boards , Users } = require('../../db');
+const { Workspaces, Boards } = require('../../db');
 
 const createBoard = async (req, res) => {
-    
-    const { id } = req.params;
-    const { title, description, logo } = req.body;
+
+    const { workspaceId } = req.params;
+    const { title, description } = req.body;
 
     try {
-        // Verificar que el usuario exista
-        const user = await Users.findByPk(id);
-        if (!user) {
-            return res.status(404).json({ error: "User not found" });
+        // Verificar si la workspace existe
+        const workspace = await Workspaces.findByPk(workspaceId);
+        if (!workspace) {
+            return res.status(404).json({ error: "Workspace not found" });
         }
 
-        // Crear el tablero y asociarlo con el usuario
+        // Crear la Board asociada a la Workspace
         const newBoard = await Boards.create({
             title,
-            description,
-            logo,
-            created_by: id,
-            members_id: [id] 
+            description
         });
 
-        // ¡¡¡¡¡¡ ASOCIAR EL TABLERO CON EL USUARIO !!!!!!
-        // Y se asigna el valor 'owner' en el campo role de UserBoards
-        await user.addBoard(newBoard, { through: { role:'owner'}});
+        await workspace.addBoard(newBoard);
 
-        // Devolver el tablero creado como respuesta
         return res.status(201).json(newBoard);
     } catch (error) {
         return res.status(500).json({ error: error.message });

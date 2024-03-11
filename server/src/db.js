@@ -41,7 +41,7 @@ sequelize.models = Object.fromEntries(capsEntries);
 // En sequelize.models están todos los modelos importados como propiedades
 // Para relacionarlos hacemos un destructuring
 
-const { Users , Boards , Lists , Cards , Comments } = sequelize.models;
+const { Users , Boards , Lists , Cards , Comments , Workspaces } = sequelize.models;
 
 // Users.beforeCreate((user, options) => {
 // 	if (!user.avatar_img) {
@@ -52,10 +52,13 @@ const { Users , Boards , Lists , Cards , Comments } = sequelize.models;
 
 // Relación de Tablas
 
-Users.belongsToMany(Boards, {through:'user_boards'});
-Boards.belongsToMany(Users, {through:'user_boards'});
+Users.belongsToMany(Workspaces, {through:'user_workspaces'});
+Workspaces.belongsToMany(Users, {through:'user_workspaces'});
 
 //LA FK LA VEMOS HACIENDO UN GET, CUANDO LO CREA MUESTRA NULL PERO HAY RELACIÓN
+Workspaces.hasMany(Boards);
+Boards.belongsTo(Workspaces)
+
 Boards.hasMany(Lists);
 Lists.belongsTo(Boards);
 

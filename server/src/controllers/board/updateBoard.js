@@ -5,15 +5,12 @@ const updateBoard = async (req, res) => {
     try {
 
         const { id } = req.params;
-        const { title, description, logo, position, state, members_id} = req.body;
+        const { title, description, state} = req.body;
 
         const [boardUpdate] = await Boards.update({
             title,
             description,
-            logo,
-            position,
-            state,
-            members_id
+            state
         }, {where:{id:id}});
 
         if(boardUpdate === 0) return res.status(404).json('Board not found');
