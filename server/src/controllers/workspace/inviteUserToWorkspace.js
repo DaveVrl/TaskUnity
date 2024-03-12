@@ -12,6 +12,9 @@ const inviteUserToWorkspace = async (req, res) => {
             return res.status(404).json({ error: "User or workspace not found" });
         }
 
+        const isMember = workspace.members_id.includes(userId);
+        if(isMember) return res.status(400).json({ error: 'User is already a member'});
+
         // Asociar el usuario con el workspace y establecer el rol como 'member'
         await user.addWorkspace(workspace, { through: { role: 'member' } });
 
