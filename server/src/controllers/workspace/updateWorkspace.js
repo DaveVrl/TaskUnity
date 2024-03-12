@@ -5,7 +5,7 @@ const updateWorkspace = async (req, res) => {
     try {
 
         const { id } = req.params;
-        const { name, description, logo, members_id, admins_id, public} = req.body;
+        const { name, description, logo, public} = req.body;
 
         const [workspaceUpdate] = await Workspaces.update({
             name,
