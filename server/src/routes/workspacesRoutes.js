@@ -12,7 +12,7 @@ workspaceRoutes.post('/workspace/:id',createWorkspace);
 workspaceRoutes.put('/workspace/:id',updateWorkspace);
 workspaceRoutes.post('/workspace/:workspaceId/invite/:userId',inviteUserToWorkspace);
 workspaceRoutes.get('/workspace/:workspaceId',getWorkspaceMembers);
-workspaceRoutes.delete('/board/:workspaceId/delete/:userId',deleteMemberFromWorkspace);
+workspaceRoutes.delete('/workspace/:workspaceId/delete/:userId',deleteMemberFromWorkspace);
 
 
 
