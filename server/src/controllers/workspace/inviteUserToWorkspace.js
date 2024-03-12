@@ -11,15 +11,19 @@ const inviteUserToWorkspace = async (req, res) => {
         if (!user || !workspace) {
             return res.status(404).json({ error: "User or workspace not found" });
         }
+        
+        // Obtener el array actual de miembros y agregar la nueva ID de usuario invitado
+        const membersId = [...workspace.members_id];
+        const isMember = membersId.includes(Number(userId));
+        if(isMember) return res.status(400).json({ error: 'User is already a member'});
 
         // Asociar el usuario con el workspace y establecer el rol como 'member'
         await user.addWorkspace(workspace, { through: { role: 'member' } });
 
-        // Obtener el array actual de miembros y agregar la nueva ID de usuario invitado
-        let membersId = [...workspace.members_id];
+        
+        // Pusheo id del nuevo member al array de members_id y actualizo DB
         membersId.push(userId);
         await workspace.update({ members_id: membersId });
-
         return res.status(200).json({ message: "User invited successfully" });
         
     } catch (error) {

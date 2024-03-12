@@ -29,8 +29,8 @@ const Lists = (sequelize) => {
             type: DataTypes.STRING,
             defaulValue: 'task'
             //Valor 'task_over' para manejar lista de task finalizadas
-        }
-    });
+        } 
+    },{timestamps: false});
 };
 
 module.exports = Lists;
