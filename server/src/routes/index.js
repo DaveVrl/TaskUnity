@@ -7,6 +7,7 @@ const listsRoutes = require('./listsRoutes');
 const cardsRoutes = require('./cardsRoutes');
 const commentsRoutes = require('./commentsRoutes');
 const workspacesRoutes = require('./workspacesRoutes');
+const adminRoutes = require('./adminRoutes');
 
 const router = Router();
 
@@ -17,6 +18,7 @@ router.use('/TaskUnity',boardsRoutes);
 router.use('/TaskUnity',listsRoutes);
 router.use('/TaskUnity',cardsRoutes);
 router.use('/TaskUnity',commentsRoutes);
+router.use('/TaskUnity',adminRoutes);
 
 
 

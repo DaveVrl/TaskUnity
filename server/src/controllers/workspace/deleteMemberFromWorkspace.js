@@ -11,7 +11,7 @@ const deleteMemberFromWorkspace = async (req, res) => {
 
         const workspace = await Workspaces.findByPk(workspaceId);
         if (!workspace) return res.status(404).json({ error: "Workspace not found" });
-console.log(workspace)
+
         // Verifico que userId sea miembro del Workspace
         const membersWorkspace = [...workspace.members_id];
         const isMember = membersWorkspace.includes(Number(userId));

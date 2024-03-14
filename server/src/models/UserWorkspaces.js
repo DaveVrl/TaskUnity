@@ -3,9 +3,17 @@ const { DataTypes } = require("sequelize");
 const UserWorkspaces = (sequelize) => {
     
     sequelize.define('user_workspaces', {
-        role: {
+        id: {
+            type: DataTypes.INTEGER,
+            autoIncrement: true,
+            primaryKey: true,
+            allowNull: false
+        },
+
+        rol: {
             type: DataTypes.STRING
         }
+        
     },{timestamps: false});
 };
 

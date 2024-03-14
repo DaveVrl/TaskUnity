@@ -25,7 +25,7 @@ const createWorkspace = async (req, res) => {
 
         // ¡¡¡¡¡¡ ASOCIAR EL TABLERO CON EL USUARIO !!!!!!
         // Y se asigna el valor 'owner' en el campo role de UserWorkspaces
-        await user.addWorkspace(newWorkspace, { through: { role:'owner'}});
+        await user.addWorkspace(newWorkspace, { through: { rol:'owner'}});
 
         // Devolver el tablero creado como respuesta
         return res.status(201).json(newWorkspace);
