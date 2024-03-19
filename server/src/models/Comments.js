@@ -10,9 +10,24 @@ const Comments = (sequelize) => {
             autoIncrement: true,
             allowNull: false
         },
+
         comment: {
             type: DataTypes.STRING
+        },
+
+        username: {
+            type: DataTypes.STRING
+        },
+
+        name: {
+            type: DataTypes.STRING,
+        },
+
+        lastname: {
+            type: DataTypes.STRING
         }
+
+
     });
 };
 

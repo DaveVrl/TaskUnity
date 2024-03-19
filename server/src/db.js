@@ -68,6 +68,9 @@ Cards.belongsTo(Lists);
 Cards.hasMany(Comments, { onDelete: 'CASCADE' });
 Comments.belongsTo(Cards);
 
+Users.hasMany(Comments, {onDelete: 'CASCADE' });
+Comments.belongsTo(Users);
+
 
 
 

@@ -23,6 +23,16 @@ const Users = (sequelize) => {
             unique: true
         },
 
+        name: {
+            type: DataTypes.STRING,
+            allowNull:false
+        },
+
+        lastname: {
+            type: DataTypes.STRING,
+            allowNull:false
+        },
+
         password: {
             type: DataTypes.STRING,
             allowNull: true

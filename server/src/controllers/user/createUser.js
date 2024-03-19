@@ -3,8 +3,9 @@ const bcrypt = require('bcrypt');
 
 const createUser = async (req , res) => {
     try {
-        const { username, email, password, avatar_img, master , admin} = req.body;
-
+        const { username, name, lastname, email, password, avatar_img, master , admin} = req.body;
+        
+        if(!name || !lastname) return res.status(500).json("Please provide name and lastname");
         if(!username || !email || !password) return res.status(500).json("Please provide username, email, and password");
         
         if (username && email) {
@@ -13,12 +14,14 @@ const createUser = async (req , res) => {
 
             const [register, created] = await Users.findOrCreate({
                 where: {username,email},
-                defaults: {username, email, password:hashedPassword, avatar_img, master, admin}
+                defaults: {username, name, lastname, email, password:hashedPassword, avatar_img, master, admin}
             });
 
             if (created) {
                 const response = {       
                     id: register.id,
+                    name: register.name,
+                    lastname: register.lastname,
                     username: register.username,
                     email: register.email,
                     password: register.password,
