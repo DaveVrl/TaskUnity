@@ -56,16 +56,16 @@ Users.belongsToMany(Workspaces, {through:'user_workspaces'});
 Workspaces.belongsToMany(Users, {through:'user_workspaces'});
 
 //LA FK LA VEMOS HACIENDO UN GET, CUANDO LO CREA MUESTRA NULL PERO HAY RELACIÓN
-Workspaces.hasMany(Boards);
+Workspaces.hasMany(Boards, { onDelete: 'CASCADE' });
 Boards.belongsTo(Workspaces)
 
-Boards.hasMany(Lists);
+Boards.hasMany(Lists, { onDelete: 'CASCADE' });
 Lists.belongsTo(Boards);
 
-Lists.hasMany(Cards);
+Lists.hasMany(Cards, { onDelete: 'CASCADE' });
 Cards.belongsTo(Lists);
 
-Cards.hasMany(Comments);
+Cards.hasMany(Comments, { onDelete: 'CASCADE' });
 Comments.belongsTo(Cards);
 
 
