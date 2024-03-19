@@ -21,6 +21,15 @@ const deleteMemberFromWorkspace = async (req, res) => {
         const ownerId = workspace.created_by;
         if( Number(userId) === ownerId ) return res.status(400).json({error: 'Cannot delete project owner'})
 
+        // Verifico si userId es Admin del Workspace
+        const adminsWorkspace = [...workspace.admins_id];
+        const isAdmin = adminsWorkspace.includes(Number(userId));
+        // En caso de ser Admin elimino su id del Array admins_id
+        if(isAdmin) {
+            const filteredAdmins = adminsWorkspace.filter( el => el !== Number(userId));
+            await workspace.update({ admins_id: filteredAdmins });
+        }
+
         // Elimino id del miembro en el Array de members_id
         const arrayFiltrado = membersWorkspace.filter( el => el !== Number(userId) );
         await workspace.update({ members_id: arrayFiltrado });

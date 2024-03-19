@@ -27,7 +27,12 @@ const assignAdminRole = async (req , res) => {
         // Modifico el rol en esta linea
         await result.dataValues.user_workspaces.update({ rol: 'admin' });
 
-        return res.status(200).json("Role successfully assigned");
+        // Guardo id del usuario en el array de admins_id y actualizo DB
+        const adminsWorkspace = [...workspace.admins_id];
+        adminsWorkspace.push(userId);
+        await workspace.update({ admins_id: adminsWorkspace });
+
+        return res.status(200).json("Rol successfully assigned");
         
     } catch (error) {
         return res.status(500).json({ error:error.message });
