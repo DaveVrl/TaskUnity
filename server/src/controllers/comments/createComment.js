@@ -8,7 +8,10 @@ const createComment = async (req , res) => {
         const { comment } = req.body;
 
         const card = await Cards.findByPk(cardId);
+        if(!card) return res.status(404).json('Card not found');
+
         const user = await Users.findByPk(userId);
+        if(!user) return res.status(404).json('User not found');
 
         const newComment = await Comments.create({
             comment,
