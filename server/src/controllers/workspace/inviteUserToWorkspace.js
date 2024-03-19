@@ -1,17 +1,33 @@
 const { Users, Workspaces } = require('../../db');
+const Sequelize = require('sequelize');
+
 
 const inviteUserToWorkspace = async (req, res) => {
-    
-    const { userId, workspaceId } = req.params;
 
     try {
-        // Verificar que el usuario y el workspace existan
-        const user = await Users.findByPk(userId);
+
+        const { workspaceId } = req.params;
+        const { username , email } = req.body;
+
+        if (!username && !email) {
+            return res.status(400).json({ error: "Please provide either username or email" });
+        }
+
+        let user;
+
+        if (username) {
+            user = await Users.findOne({ where: { username: username } });
+        } else {
+            user = await Users.findOne({ where: { email: email } });
+        }
+
         const workspace = await Workspaces.findByPk(workspaceId);
         if (!user || !workspace) {
             return res.status(404).json({ error: "User or workspace not found" });
         }
-        
+
+        const userId = user.id;
+
         // Obtener el array actual de miembros y agregar la nueva ID de usuario invitado
         const membersId = [...workspace.members_id];
         const isMember = membersId.includes(Number(userId));

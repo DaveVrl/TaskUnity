@@ -11,7 +11,7 @@ const workspaceRoutes = Router();
 
 workspaceRoutes.post('/workspace/:id',createWorkspace);
 workspaceRoutes.put('/workspace/:id',updateWorkspace);
-workspaceRoutes.post('/workspace/:workspaceId/invite/:userId',inviteUserToWorkspace);
+workspaceRoutes.post('/workspace/:workspaceId/invite',inviteUserToWorkspace);
 workspaceRoutes.get('/workspace/:workspaceId',getWorkspaceMembers);
 workspaceRoutes.delete('/workspace/:workspaceId/delete/:userId',deleteMemberFromWorkspace);
 workspaceRoutes.delete('/workspace/:id', deleteWorkspace);
