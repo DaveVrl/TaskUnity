@@ -12,7 +12,7 @@ const deleteUser = async (req, res) => {
         // Filtro los Workspace en los que se es Miembro y Admin
         const memberWorkspaces = userWorkspaces.filter(el => el.dataValues.created_by !== Number(id));
 
-        // Recorro cada workspace y limpio la data del usuario
+        // Recorro cada workspace al que pertenece el usuario y limpio la data
         const deleteDataWorkspaces = memberWorkspaces.map( async el => {     
             
             if(el.dataValues.user_workspaces.rol === 'admin') {

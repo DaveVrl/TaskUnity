@@ -6,7 +6,7 @@ const deleteComment = require('../controllers/comments/deleteComment');
 
 const commentsRoutes = Router();
 
-commentsRoutes.post('/card/:cardId/comment',createComment);
+commentsRoutes.post('/card/:cardId/comment-by/:userId',createComment);
 commentsRoutes.put('/comment/:id',updateComment);
 commentsRoutes.delete('/comment/:id',deleteComment);
 

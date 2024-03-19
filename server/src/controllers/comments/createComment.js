@@ -1,19 +1,24 @@
-const { Comments , Cards } = require("../../db");
+const { Comments , Cards , Users } = require("../../db");
 
 const createComment = async (req , res) => {
     
     try {
         
-        const { cardId } = req.params;
+        const { cardId , userId } = req.params;
         const { comment } = req.body;
 
         const card = await Cards.findByPk(cardId);
+        const user = await Users.findByPk(userId);
 
         const newComment = await Comments.create({
             comment,
+            username:user.username,
+            name:user.name,
+            lastname:user.lastname
         });
 
         await card.addComment(newComment);
+        await user.addComment(newComment);
 
         return res.status(200).json(newComment);
 
