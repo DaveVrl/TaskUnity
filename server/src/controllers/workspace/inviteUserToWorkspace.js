@@ -1,5 +1,4 @@
 const { Users, Workspaces } = require('../../db');
-const Sequelize = require('sequelize');
 
 
 const inviteUserToWorkspace = async (req, res) => {
