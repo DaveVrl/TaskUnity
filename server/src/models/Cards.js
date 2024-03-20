@@ -27,12 +27,26 @@ const Cards = (sequelize) => {
         state: {
             type: DataTypes.STRING,
             defaulValue: 'default'
-            //Debo manejar 3 estados para styles 'assigned' 'done'
+            //Debo manejar 3 estados para styles 'in-progress' 'done'
         },
 
         assigned_to: {
-            type: DataTypes.ARRAY(DataTypes.INTEGER),
-            defaulValue: 'default'
+            type: DataTypes.JSON,
+            defaultValue: null,
+            allowNull: true,
+            get() {
+                const assignedTo = this.getDataValue('assigned_to');
+                if (assignedTo) {
+                    return {
+                        id: assignedTo.id,
+                        name: assignedTo.name,
+                        username: assignedTo.username,
+                        avatar_img: assignedTo.avatar_img
+                    };
+                } else {
+                    return null;
+                }
+            }
         },
 
         due_date: {
