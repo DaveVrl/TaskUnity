@@ -38,6 +38,7 @@ const getWorkspaceCards = async (req, res) => {
         });
 
         const foundCards = [];
+        
         userWorkspace.forEach(workspace => {
             workspace.boards.forEach(board => {
                 board.lists.forEach(list => {
