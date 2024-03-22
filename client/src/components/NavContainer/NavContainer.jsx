@@ -13,7 +13,7 @@ const NavContainer = () => {
     setExpanded(false);
   };
   
-  const condicional = true;
+  const condicional = false;
 
     return (
         <Navbar bg="dark" data-bs-theme="dark" collapseOnSelect expand="lg" className="bg-body-tertiary" 

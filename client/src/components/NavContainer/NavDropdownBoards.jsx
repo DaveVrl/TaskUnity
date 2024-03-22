@@ -1,7 +1,20 @@
+import { useEffect } from 'react';
 import NavDropdown from 'react-bootstrap/NavDropdown';
+import { useSelector , useDispatch } from 'react-redux';
+// import { useParams } from 'react-router-dom';
+import { getUserWorkspaces } from '../../redux/actions';
 
 const NavDropdownBoards = () => {
 
+    const dispatch = useDispatch();
+    const id = 1;
+    const workspaces = useSelector( state => state.userWorkspaces);
+
+    useEffect(() => {
+        dispatch(getUserWorkspaces(id))
+    }, [dispatch, id])
+    
+    console.log(workspaces)
     return (
         <NavDropdown title="Workspace" id="navbarScrollingDropdown">
                   <NavDropdown.Item href="#action/3.1">Projecto1</NavDropdown.Item>

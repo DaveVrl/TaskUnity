@@ -1,15 +1,23 @@
+import { GET_USER_WORKSPACES } from "./action-type";
+
 const initialState = {
-    // Define cualquier estado inicial que necesites aquí
-    todos: [],
-    user: null,
-    // Otros datos iniciales...
+
+    userWorkspaces: []
+
   };
   
   const reducer = (state = initialState, action) => {
+
     switch (action.type) {
-      // Puedes añadir casos de acción aquí si lo necesitas en el futuro
+
+      case GET_USER_WORKSPACES:
+        return{
+          ...state,
+          userWorkspaces: action.payload
+        }
+
       default:
-        return state;
+        return {...state};
     }
   };
   
