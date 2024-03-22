@@ -3,13 +3,12 @@ const { Lists } = require('../../db');
 const updateList = async (req, res) => {
     
     const { id } = req.params;
-    const { title, description, position, type } = req.body;
+    const { title, position, type } = req.body;
 
     try {
         
         const [rowsUpdated] = await Lists.update({
                 title,
-                description,
                 position,
                 type
             },{where:{ id }});

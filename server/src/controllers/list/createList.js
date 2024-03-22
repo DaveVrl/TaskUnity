@@ -3,7 +3,7 @@ const { Boards, Lists } = require('../../db');
 const createList = async (req, res) => {
 
     const { boardId } = req.params;
-    const { title, description, position, type } = req.body;
+    const { title, position, type } = req.body;
 
     try {
         // Verificar si la board existe
@@ -15,7 +15,6 @@ const createList = async (req, res) => {
         // Crear la lista asociada a la board
         const newList = await Lists.create({
             title,
-            description,
             position,
             type
         });

@@ -6,6 +6,8 @@ import store from './redux/store.js';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 
+export const URL = 'http://localhost:3001/TaskUnity/'; //Local
+
 ReactDOM.createRoot(document.getElementById('root')).render(
   <Provider store={store}>
   <BrowserRouter>

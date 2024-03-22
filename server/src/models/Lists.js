@@ -17,10 +17,6 @@ const Lists = (sequelize) => {
             allowNull: false
         },
 
-        description: {
-            type: DataTypes.STRING,
-        },
-
         position: {
             type: DataTypes.INTEGER,
         },
