@@ -12,6 +12,7 @@ module.exports = {
   settings: { react: { version: '18.2' } },
   plugins: ['react-refresh'],
   rules: {
+    "react/prop-types": "off", //Evita error de 'missing in props' 
     'react/jsx-no-target-blank': 'off',
     'react-refresh/only-export-components': [
       'warn',

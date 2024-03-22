@@ -1,10 +1,19 @@
 import Card from "../Card/Card";
 
-const List = () => {
+const List = ({ title , cards}) => {
 
     return (
         <>
-        <Card/>
+        <h1>{title}</h1>
+        {cards?.map(({ id ,title }) => {
+            return(
+                <Card
+                key={id}
+                title={title}
+                />
+            )
+        })}
+        <button>New Task</button>
         </>
     )
 };

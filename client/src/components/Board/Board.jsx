@@ -1,10 +1,21 @@
 import List from "../List/List";
 
-const Board = () => {
+const Board = ({title , lists}) => {
 
     return (
         <>
-        <List/>
+        <h1>{title}</h1>
+        {
+            lists?.map(({ id,title }) => {
+                return(
+                    <List
+                    key={id}
+                    title={title}
+                    />                    
+                )
+            })
+        }
+        <button>New List</button>
         </>
     )
 };
