@@ -1,7 +1,8 @@
-import { GET_USER_WORKSPACES } from "./action-type";
+import { LOGIN , GET_USER_WORKSPACES } from "./action-type";
 
 const initialState = {
 
+    userId: null,
     userWorkspaces: []
 
   };
@@ -10,8 +11,14 @@ const initialState = {
 
     switch (action.type) {
 
+      case LOGIN:
+        return {
+          ...state,
+          userId: action.payload.id
+        }
+
       case GET_USER_WORKSPACES:
-        return{
+        return {
           ...state,
           userWorkspaces: action.payload
         }
