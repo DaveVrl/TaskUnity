@@ -1,9 +1,10 @@
-import { LOGIN , GET_USER_WORKSPACES } from "./action-type";
+import { LOGIN , GET_USER_WORKSPACES, IS_LOGIN } from "./action-type";
 
 const initialState = {
 
     userId: null,
-    userWorkspaces: []
+    userWorkspaces: [],
+    isLogin: true
 
   };
   
@@ -21,6 +22,12 @@ const initialState = {
         return {
           ...state,
           userWorkspaces: action.payload
+        }
+
+      case IS_LOGIN:
+        return {
+          ...state,
+          isLogin: action.payload
         }
 
       default:

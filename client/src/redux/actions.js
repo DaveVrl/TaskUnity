@@ -1,4 +1,4 @@
-import { LOGIN , GET_USER_WORKSPACES } from './action-type';
+import { LOGIN , GET_USER_WORKSPACES , IS_LOGIN } from './action-type';
 import { URL } from '../main';
 import axios from 'axios';
 
@@ -32,5 +32,12 @@ export const getUserWorkspaces = (id) => {
         } catch (error) {
             console.error(error.message);
         }
+    }
+};
+
+export const setIsLogin = (value) => {
+    return {
+        type: IS_LOGIN,
+        payload: value
     }
 };
