@@ -1,1 +1,2 @@
+export const LOGIN = 'LOGIN';
 export const GET_USER_WORKSPACES = 'GET_USER_WORKSPACES';
