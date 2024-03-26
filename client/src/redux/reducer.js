@@ -3,7 +3,8 @@ import { LOGIN , GET_USER_WORKSPACES } from "./action-type";
 const initialState = {
 
     userId: null,
-    userWorkspaces: []
+    userWorkspaces: [],
+    isLogin: false
 
   };
   
@@ -14,7 +15,8 @@ const initialState = {
       case LOGIN:
         return {
           ...state,
-          userId: action.payload.id
+          userId: action.payload.id,
+          isLogin: true
         }
 
       case GET_USER_WORKSPACES:
